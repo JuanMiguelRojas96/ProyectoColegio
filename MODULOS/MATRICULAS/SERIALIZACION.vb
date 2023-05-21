@@ -7,24 +7,33 @@ Public Class SERIALIZACION
     End Sub
 
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Guardar.Click
-        Try
-            Dim cmd As New SqlCommand
-            abrir()
-            cmd = New SqlCommand("insertar_Serializacion", conexion)
-            cmd.CommandType = CommandType.StoredProcedure '4 es el valor en Int de un CommandType.StoredProcedure'
-            cmd.Parameters.AddWithValue("@Serie", txtserie.Text)
-            cmd.Parameters.AddWithValue("@numeroinicio", txtnumeroinicio.Text)
-            cmd.Parameters.AddWithValue("@numerofin", txtnumerofin.Text)
-            cmd.Parameters.AddWithValue("@Tipo_de_comprobante", txtcomprobante.Text)
-            cmd.ExecuteNonQuery()
-            cerrar()
-            listar()
-            Panel2.Visible = False
+        If String.IsNullOrWhiteSpace(txtnumeroinicio.Text) Or IsNumeric(txtnumeroinicio.Text) = False Then
+            MessageBox.Show("Por Favor Ingresa un Dato válido en Numero Inicio", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf String.IsNullOrWhiteSpace(txtnumerofin.Text) Or IsNumeric(txtnumerofin.Text) = False Then
+            MessageBox.Show("Por Favor Ingresa un Dato válido en Número Fin", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf String.IsNullOrWhiteSpace(txtserie.Text) Or String.IsNullOrWhiteSpace(txtcomprobante.Text) Then
+            MessageBox.Show("Por Favor Ingresa Datos válidos", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            Try
+                Dim cmd As New SqlCommand
+                abrir()
+                cmd = New SqlCommand("insertar_Serializacion", conexion)
+                cmd.CommandType = CommandType.StoredProcedure '4 es el valor en Int de un CommandType.StoredProcedure'
+                cmd.Parameters.AddWithValue("@Serie", txtserie.Text)
+                cmd.Parameters.AddWithValue("@numeroinicio", txtnumeroinicio.Text)
+                cmd.Parameters.AddWithValue("@numerofin", txtnumerofin.Text)
+                cmd.Parameters.AddWithValue("@Tipo_de_comprobante", txtcomprobante.Text)
+                cmd.ExecuteNonQuery()
+                cerrar()
+                listar()
+                Panel2.Visible = False
 
-        Catch ex As Exception
+            Catch ex As Exception
 
 
-        End Try
+            End Try
+
+        End If
     End Sub
 
     Sub limpiar()
@@ -59,24 +68,31 @@ Public Class SERIALIZACION
     End Sub
 
     Private Sub GuardarCambioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarCambio.Click
-        Try
-            Dim cmd As New SqlCommand
-            abrir()
-            cmd = New SqlCommand("editar_serializacion", conexion)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@numeroinicio", txtnumeroinicio.Text)
-            cmd.Parameters.AddWithValue("@numerofin", txtnumerofin.Text)
-            cmd.Parameters.AddWithValue("@Tipo_de_comprobante", txtcomprobante.Text)
-            cmd.Parameters.AddWithValue("@Serie", txtserie.Text)
-            cmd.Parameters.AddWithValue("@Id_serie", dataUsuarios.SelectedCells.Item(4).Value)
-            cmd.ExecuteNonQuery()
-            cerrar()
-            listar()
-            Panel2.Visible = False
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-
-        End Try
+        If String.IsNullOrWhiteSpace(txtnumeroinicio.Text) Or IsNumeric(txtnumeroinicio.Text) = False Then
+            MessageBox.Show("Por Favor Ingresa un Dato válido en Numero Inicio", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf String.IsNullOrWhiteSpace(txtnumerofin.Text) Or IsNumeric(txtnumerofin.Text) = False Then
+            MessageBox.Show("Por Favor Ingresa un Dato válido en Número Fin", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf String.IsNullOrWhiteSpace(txtserie.Text) Or String.IsNullOrWhiteSpace(txtcomprobante.Text) Then
+            MessageBox.Show("Por Favor Ingresa Datos válidos", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            Try
+                Dim cmd As New SqlCommand
+                abrir()
+                cmd = New SqlCommand("editar_serializacion", conexion)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.AddWithValue("@numeroinicio", txtnumeroinicio.Text)
+                cmd.Parameters.AddWithValue("@numerofin", txtnumerofin.Text)
+                cmd.Parameters.AddWithValue("@Tipo_de_comprobante", txtcomprobante.Text)
+                cmd.Parameters.AddWithValue("@Serie", txtserie.Text)
+                cmd.Parameters.AddWithValue("@Id_serie", dataUsuarios.SelectedCells.Item(4).Value)
+                cmd.ExecuteNonQuery()
+                cerrar()
+                listar()
+                Panel2.Visible = False
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -146,7 +162,4 @@ Public Class SERIALIZACION
         End Try
     End Sub
 
-    Private Sub txtnumerofin_TextChanged(sender As Object, e As EventArgs) Handles txtnumerofin.TextChanged
-
-    End Sub
 End Class
