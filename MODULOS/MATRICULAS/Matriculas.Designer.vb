@@ -24,9 +24,10 @@ Partial Class Matriculas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Matriculas))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblBusqueda = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
@@ -69,7 +70,8 @@ Partial Class Matriculas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelPrincipal = New System.Windows.Forms.Panel()
-        Me.lblBusqueda = New System.Windows.Forms.Label()
+        Me.MenuStrip4 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
@@ -79,19 +81,31 @@ Partial Class Matriculas
         Me.MenuStrip3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.panelPrincipal.SuspendLayout()
+        Me.MenuStrip4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.lblBusqueda)
         Me.Panel2.Controls.Add(Me.MenuStrip1)
-        Me.Panel2.Controls.Add(Me.txtBuscar)
         Me.Panel2.Controls.Add(Me.MenuStrip2)
+        Me.Panel2.Controls.Add(Me.lblBusqueda)
+        Me.Panel2.Controls.Add(Me.txtBuscar)
         Me.Panel2.Location = New System.Drawing.Point(78, 14)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(538, 48)
         Me.Panel2.TabIndex = 2
+        '
+        'lblBusqueda
+        '
+        Me.lblBusqueda.AutoSize = True
+        Me.lblBusqueda.BackColor = System.Drawing.Color.Transparent
+        Me.lblBusqueda.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBusqueda.Location = New System.Drawing.Point(73, 18)
+        Me.lblBusqueda.Name = "lblBusqueda"
+        Me.lblBusqueda.Size = New System.Drawing.Size(89, 18)
+        Me.lblBusqueda.TabIndex = 8
+        Me.lblBusqueda.Text = "Buscar Alumno..."
         '
         'MenuStrip1
         '
@@ -99,7 +113,7 @@ Partial Class Matriculas
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
-        Me.MenuStrip1.Location = New System.Drawing.Point(485, 6)
+        Me.MenuStrip1.Location = New System.Drawing.Point(485, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(44, 33)
         Me.MenuStrip1.TabIndex = 16
@@ -118,11 +132,11 @@ Partial Class Matriculas
         '
         Me.txtBuscar.BackColor = System.Drawing.Color.White
         Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtBuscar.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBuscar.ForeColor = System.Drawing.Color.Black
         Me.txtBuscar.Location = New System.Drawing.Point(57, 9)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(424, 30)
+        Me.txtBuscar.Size = New System.Drawing.Size(424, 35)
         Me.txtBuscar.TabIndex = 0
         '
         'MenuStrip2
@@ -132,7 +146,7 @@ Partial Class Matriculas
         Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolstrmenuBuscar})
-        Me.MenuStrip2.Location = New System.Drawing.Point(16, 9)
+        Me.MenuStrip2.Location = New System.Drawing.Point(16, 11)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(39, 30)
         Me.MenuStrip2.TabIndex = 15
@@ -156,24 +170,24 @@ Partial Class Matriculas
         Me.dataListadoAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dataListadoAlumnos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dataListadoAlumnos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataListadoAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dataListadoAlumnos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.dataListadoAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataListadoAlumnos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Delete})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dataListadoAlumnos.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dataListadoAlumnos.DefaultCellStyle = DataGridViewCellStyle20
         Me.dataListadoAlumnos.EnableHeadersVisualStyles = False
         Me.dataListadoAlumnos.Location = New System.Drawing.Point(622, 118)
         Me.dataListadoAlumnos.Name = "dataListadoAlumnos"
@@ -203,6 +217,7 @@ Partial Class Matriculas
         '
         Me.panelMatriculas.BackColor = System.Drawing.Color.White
         Me.panelMatriculas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelMatriculas.Controls.Add(Me.MenuStrip4)
         Me.panelMatriculas.Controls.Add(Me.Button1)
         Me.panelMatriculas.Controls.Add(Me.txtComprobante)
         Me.panelMatriculas.Controls.Add(Me.VScrollBar1)
@@ -230,7 +245,7 @@ Partial Class Matriculas
         Me.panelMatriculas.Controls.Add(Me.MenuStrip3)
         Me.panelMatriculas.Location = New System.Drawing.Point(32, 105)
         Me.panelMatriculas.Name = "panelMatriculas"
-        Me.panelMatriculas.Size = New System.Drawing.Size(630, 361)
+        Me.panelMatriculas.Size = New System.Drawing.Size(630, 568)
         Me.panelMatriculas.TabIndex = 7
         '
         'Button1
@@ -264,7 +279,7 @@ Partial Class Matriculas
         Me.VScrollBar1.Dock = System.Windows.Forms.DockStyle.Right
         Me.VScrollBar1.Location = New System.Drawing.Point(608, 0)
         Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(20, 359)
+        Me.VScrollBar1.Size = New System.Drawing.Size(20, 566)
         Me.VScrollBar1.TabIndex = 22
         '
         'ComboBox6
@@ -573,15 +588,27 @@ Partial Class Matriculas
         Me.panelPrincipal.Size = New System.Drawing.Size(695, 685)
         Me.panelPrincipal.TabIndex = 9
         '
-        'lblBusqueda
+        'MenuStrip4
         '
-        Me.lblBusqueda.AutoSize = True
-        Me.lblBusqueda.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 14.25!)
-        Me.lblBusqueda.Location = New System.Drawing.Point(80, 13)
-        Me.lblBusqueda.Name = "lblBusqueda"
-        Me.lblBusqueda.Size = New System.Drawing.Size(102, 23)
-        Me.lblBusqueda.TabIndex = 8
-        Me.lblBusqueda.Text = "Buscar Alumno..."
+        Me.MenuStrip4.AutoSize = False
+        Me.MenuStrip4.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip4.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip4.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.MenuStrip4.Location = New System.Drawing.Point(387, 374)
+        Me.MenuStrip4.Name = "MenuStrip4"
+        Me.MenuStrip4.Size = New System.Drawing.Size(44, 33)
+        Me.MenuStrip4.TabIndex = 26
+        Me.MenuStrip4.Text = "MenuStrip4"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.BackColor = System.Drawing.Color.Silver
+        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.Black
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(37, 29)
+        Me.ToolStripMenuItem2.Text = "+"
         '
         'Matriculas
         '
@@ -611,6 +638,8 @@ Partial Class Matriculas
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.panelPrincipal.ResumeLayout(False)
+        Me.MenuStrip4.ResumeLayout(False)
+        Me.MenuStrip4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -659,4 +688,6 @@ Partial Class Matriculas
     Friend WithEvents Label5 As Label
     Friend WithEvents panelPrincipal As Panel
     Friend WithEvents lblBusqueda As Label
+    Friend WithEvents MenuStrip4 As MenuStrip
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
 End Class

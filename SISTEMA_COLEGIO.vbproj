@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8CC007D1-F72D-4230-8FDC-4619853B286C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Pruebaproyecto.SERIALIZACION</StartupObject>
+    <StartupObject>Pruebaproyecto.Matriculas</StartupObject>
     <RootNamespace>Pruebaproyecto</RootNamespace>
     <AssemblyName>Pruebaproyecto</AssemblyName>
     <FileAlignment>512</FileAlignment>

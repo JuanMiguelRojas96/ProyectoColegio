@@ -22,8 +22,8 @@ Partial Class SERIALIZACION
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SERIALIZACION))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnClosePnlUser = New System.Windows.Forms.Button()
@@ -63,7 +63,7 @@ Partial Class SERIALIZACION
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Panel1.Controls.Add(Me.btnClosePnlUser)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -91,7 +91,7 @@ Partial Class SERIALIZACION
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(12, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(251, 23)
@@ -118,7 +118,7 @@ Partial Class SERIALIZACION
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
@@ -146,7 +146,7 @@ Partial Class SERIALIZACION
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.Color.Silver
         Me.Label5.Location = New System.Drawing.Point(12, 20)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(162, 23)
@@ -248,14 +248,16 @@ Partial Class SERIALIZACION
         '
         'Guardar
         '
-        Me.Guardar.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Guardar.ForeColor = System.Drawing.Color.Silver
         Me.Guardar.Name = "Guardar"
         Me.Guardar.Size = New System.Drawing.Size(73, 29)
         Me.Guardar.Text = "Guardar"
         '
         'GuardarCambio
         '
-        Me.GuardarCambio.BackColor = System.Drawing.SystemColors.Highlight
+        Me.GuardarCambio.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.GuardarCambio.ForeColor = System.Drawing.Color.Silver
         Me.GuardarCambio.Name = "GuardarCambio"
         Me.GuardarCambio.Size = New System.Drawing.Size(120, 29)
         Me.GuardarCambio.Text = "Guardar Cambio"
@@ -276,24 +278,24 @@ Partial Class SERIALIZACION
         Me.dataUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dataUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dataUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dataUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dataUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Delete})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dataUsuarios.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dataUsuarios.DefaultCellStyle = DataGridViewCellStyle4
         Me.dataUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataUsuarios.EnableHeadersVisualStyles = False
         Me.dataUsuarios.Location = New System.Drawing.Point(0, 0)

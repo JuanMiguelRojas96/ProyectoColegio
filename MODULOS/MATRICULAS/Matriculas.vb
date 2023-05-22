@@ -103,4 +103,12 @@ Public Class Matriculas
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        SERIALIZACION.ShowDialog()
+    End Sub
+
+    Private Sub txtComprobante_Click(sender As Object, e As EventArgs) Handles txtComprobante.Click
+        mostrar_Tipo_de_documentos_para_insertar_en_MATRICULAS()
+    End Sub
 End Class
