@@ -152,8 +152,8 @@ Public Class SERIALIZACION
         Panel2.Visible = True
         Try
             txtcomprobante.Text = dataUsuarios.SelectedCells.Item(6).Value
-            txtnumerofin.Text = dataUsuarios.SelectedCells.Item(2).Value
-            txtnumeroinicio.Text = dataUsuarios.SelectedCells.Item(3).Value
+            txtnumerofin.Text = dataUsuarios.SelectedCells.Item(3).Value
+            txtnumeroinicio.Text = dataUsuarios.SelectedCells.Item(2).Value
             txtserie.Text = dataUsuarios.SelectedCells.Item(1).Value
             Guardar.Visible = False
             GuardarCambio.Visible = True
