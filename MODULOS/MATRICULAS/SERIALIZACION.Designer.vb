@@ -63,7 +63,7 @@ Partial Class SERIALIZACION
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Panel1.Controls.Add(Me.btnClosePnlUser)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -78,7 +78,7 @@ Partial Class SERIALIZACION
         Me.btnClosePnlUser.FlatAppearance.BorderSize = 0
         Me.btnClosePnlUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClosePnlUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClosePnlUser.ForeColor = System.Drawing.Color.Black
+        Me.btnClosePnlUser.ForeColor = System.Drawing.Color.Silver
         Me.btnClosePnlUser.Location = New System.Drawing.Point(935, 12)
         Me.btnClosePnlUser.Name = "btnClosePnlUser"
         Me.btnClosePnlUser.Size = New System.Drawing.Size(35, 28)
@@ -91,7 +91,7 @@ Partial Class SERIALIZACION
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ForeColor = System.Drawing.Color.Silver
         Me.Label1.Location = New System.Drawing.Point(12, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(251, 23)
@@ -118,7 +118,7 @@ Partial Class SERIALIZACION
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
@@ -146,7 +146,7 @@ Partial Class SERIALIZACION
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Gloucester MT Extra Condensed", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.ForeColor = System.Drawing.Color.Silver
         Me.Label5.Location = New System.Drawing.Point(12, 20)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(162, 23)
@@ -248,14 +248,16 @@ Partial Class SERIALIZACION
         '
         'Guardar
         '
-        Me.Guardar.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Guardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.Guardar.ForeColor = System.Drawing.Color.Silver
         Me.Guardar.Name = "Guardar"
         Me.Guardar.Size = New System.Drawing.Size(73, 29)
         Me.Guardar.Text = "Guardar"
         '
         'GuardarCambio
         '
-        Me.GuardarCambio.BackColor = System.Drawing.SystemColors.Highlight
+        Me.GuardarCambio.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.GuardarCambio.ForeColor = System.Drawing.Color.Silver
         Me.GuardarCambio.Name = "GuardarCambio"
         Me.GuardarCambio.Size = New System.Drawing.Size(120, 29)
         Me.GuardarCambio.Text = "Guardar Cambio"

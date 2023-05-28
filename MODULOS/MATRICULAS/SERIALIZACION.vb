@@ -108,7 +108,7 @@ Public Class SERIALIZACION
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim result As DialogResult
-        result = MessageBox.Show("¿Realmente desea eliminar este Usuario?", "Eliminar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        result = MessageBox.Show("¿Realmente desea eliminar este Comprobante?", "Eliminar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
         If result = DialogResult.OK Then
             Try
                 For Each row As DataGridViewRow In dataUsuarios.SelectedRows
