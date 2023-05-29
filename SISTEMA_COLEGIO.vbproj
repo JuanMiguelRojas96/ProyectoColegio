@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="ConectDataBase\MainConect.vb" />
     <Compile Include="ConectDataBase\Tamano_automatico_de_datatables.vb" />
     <Compile Include="MODULOS\ALUMNOS\Alumnos.Designer.vb">

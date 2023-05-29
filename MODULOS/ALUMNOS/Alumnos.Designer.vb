@@ -332,6 +332,7 @@ Partial Class Alumnos
         Me.dataAlumnos.AllowUserToAddRows = False
         Me.dataAlumnos.AllowUserToDeleteRows = False
         Me.dataAlumnos.AllowUserToResizeRows = False
+        Me.dataAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dataAlumnos.BackgroundColor = System.Drawing.Color.LightGray
         Me.dataAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dataAlumnos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None

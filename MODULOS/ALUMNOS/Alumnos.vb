@@ -262,7 +262,4 @@ Public Class Alumnos
         End If
     End Sub
 
-    Private Sub dataAlumnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataAlumnos.CellContentClick
-
-    End Sub
 End Class
